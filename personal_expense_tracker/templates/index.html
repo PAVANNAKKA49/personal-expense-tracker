@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Personal Expense Tracker</h2>
+
+<form action="{{ url_for('add_expense') }}" method="POST" class="form-inline mb-4">
+    <input type="text" name="amount" class="form-control mr-2" placeholder="Amount" required>
+    <input type="text" name="category" class="form-control mr-2" placeholder="Category" required>
+    <input type="text" name="description" class="form-control mr-2" placeholder="Description" required>
+    <input type="date" name="date" class="form-control mr-2" required>
+    <button type="submit" class="btn btn-primary">Add Expense</button>
+</form>
+
+<h4>Expenses</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense[4] }}</td>
+            <td>{{ expense[1] }}</td>
+            <td>{{ expense[2] }}</td>
+            <td>{{ expense[3] }}</td>
+            <td>
+                <a href="{{ url_for('delete_expense', expense_id=expense[0]) }}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h4>Spending by Category</h4>
+<canvas id="expenseChart"></canvas>
+{% endblock %}

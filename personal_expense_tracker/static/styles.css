@@ -1,0 +1,181 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e8f0fe, #e3ebf5);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.app-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+h2 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Expense Form Styling */
+.expense-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #a78bfa, #6366f1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #818cf8, #4f46e5);
+}
+
+/* Table Styling */
+.expense-table {
+    margin-top: 40px;
+}
+
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background: linear-gradient(135deg, #fbcfe8, #f9a8d4);
+    color: #4a4a4a;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    padding: 12px;
+    color: #343a40;
+}
+
+.thead-dark th {
+    color: #fff;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #fca5a5, #f87171);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+}
+
+/* Chart Styling */
+.expense-chart {
+    margin-top: 50px;
+    padding: 20px;
+    background: linear-gradient(135deg, #bbf7d0, #86efac);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-canvas {
+    max-width: 100%;
+    height: 300px;
+}
+
+/* Hover Effects */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+/* Outer Background Video Styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.4; /* Background opacity */
+}
+
+/* Inner Content Video Styling */
+#content-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3; /* Adjust opacity for desired brightness */
+}
+
+/* Overlay Styling for App Content */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback for no video support */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Ensures the video stays contained within */
+}
+
+/* Ensure text remains readable on top of video */
+h2, .table th, .table td, .form-control, .btn-primary {
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    z-index: 1; /* Brings text and controls above the video */
+}
+
+.form-control, .btn-primary, .btn-danger {
+    background: rgba(255, 255, 255, 0.9); /* Subtle background on inputs */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.btn-primary:hover, .btn-danger:hover {
+    opacity: 0.9;
+}
+
+
